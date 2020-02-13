@@ -17,4 +17,12 @@ class Bill
     var billDate:Date
     var totalAmount:Float = 0
     var billType:BillType
+    
+    
+    init(billID:Int, billDate:Date,billType:BillType)
+    {
+        self.billID = billID
+        self.billDate = billDate
+        self.billType=billType
+    }
 }
