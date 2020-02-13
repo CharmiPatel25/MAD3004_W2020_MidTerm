@@ -12,17 +12,18 @@ class Internet:Bill
     var providerName:String
     var internetGBUsed:Float
     
-    init(billID:Int, billDate:Date,billType:BillType,providerName:String,internetGBUsed:Float) {
+    init(billID:Int, billDate:Date,billType:BillType,providerName:String,internetGBUsed:Float)
+    {
         self.providerName=providerName
         self.internetGBUsed=internetGBUsed
         super.init(billID: billID, billDate: billDate, billType: billType)
+    }
         
-        
-        func Display()
+        override func Display()
         {
             super.Display()
             print("Provider Name : \(providerName)")
             print("Internet GB Used : \(internetGBUsed)")
         }
-    }
+    
 }
