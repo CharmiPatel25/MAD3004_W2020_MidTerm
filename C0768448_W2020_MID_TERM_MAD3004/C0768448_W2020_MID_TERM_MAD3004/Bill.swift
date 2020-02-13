@@ -7,6 +7,10 @@
 //
 
 import Foundation
+enum BillType
+{
+    case Mobile,Internet,Hydro
+}
 class Bill
 {
     var billID:Int
