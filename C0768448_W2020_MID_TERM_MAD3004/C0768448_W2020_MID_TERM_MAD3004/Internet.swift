@@ -16,5 +16,13 @@ class Internet:Bill
         self.providerName=providerName
         self.internetGBUsed=internetGBUsed
         super.init(billID: billID, billDate: billDate, billType: billType)
+        
+        
+        func Display()
+        {
+            super.Display()
+            print("Provider Name : \(providerName)")
+            print("Internet GB Used : \(internetGBUsed)")
+        }
     }
 }
