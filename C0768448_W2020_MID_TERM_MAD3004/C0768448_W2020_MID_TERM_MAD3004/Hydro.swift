@@ -9,5 +9,6 @@
 import Foundation
 class Hydro:Bill
 {
-    
+    var agencyName:String
+    var unitsConsumed:Int
 }
