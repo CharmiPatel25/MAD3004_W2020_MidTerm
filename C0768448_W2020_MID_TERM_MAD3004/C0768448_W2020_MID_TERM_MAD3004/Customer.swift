@@ -7,8 +7,10 @@
 //
 
 import Foundation
-class Customer
+class Customer:IDisplay
 {
+    
+    
     var customerID:Int
     var firstName:String
     var lastName:String
@@ -17,5 +19,16 @@ class Customer
         return " \(firstName) \(lastName)"
     }
     var emailID:String
-    
+    var totalAmountToPay:Float?
+    var bills=Array<Bill>()
+
+    init(customerID:Int,firstName:String,lastName:String,emailID:String) {
+        self.customerID=customerID
+        self.firstName=firstName
+        self.lastName=lastName
+        self.emailID=emailID
+    }
+    func Display() {
+        print("")
+    }
 }
