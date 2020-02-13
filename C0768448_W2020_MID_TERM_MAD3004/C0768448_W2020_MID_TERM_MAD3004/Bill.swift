@@ -9,5 +9,8 @@
 import Foundation
 class Bill
 {
-    
+    var billID:Int
+    var billDate:Date
+    var totalAmount:Float = 0
+    var billType:BillType
 }
