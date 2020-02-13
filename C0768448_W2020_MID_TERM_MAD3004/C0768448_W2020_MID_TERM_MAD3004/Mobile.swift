@@ -15,6 +15,7 @@ class Mobile:Bill
     var internetGBUsed:Float
     var minutesUsed:Float
     
+    
     init(billID:Int, billDate:Date,billType:BillType,mobileManufacturerName:String,mobilePlanName:String,mobileNumber:String,internetGBUsed:Float,minutesUsed:Float)
     {
         
