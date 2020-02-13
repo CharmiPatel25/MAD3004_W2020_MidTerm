@@ -8,5 +8,5 @@
 
 import Foundation
 protocol IDisplay {
-    <#requirements#>
+    func Display()
 }
