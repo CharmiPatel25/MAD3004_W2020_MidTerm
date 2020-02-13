@@ -27,5 +27,15 @@ class Mobile:Bill
         super.init(billID: billID, billDate: billDate, billType: billType)
     }
     
+   
+    override func Display() {
+        super.Display()
+        print("Mobile Nanufacture Name : \(mobileManufacturerName)")
+        print("Mobile Plan Name : \(mobilePlanName)")
+        print("Mobile Number : \(mobileNumber)")
+        print("Mobile Internet Used : \(internetGBUsed)")
+        print("Minuted Usef : \(minutesUsed)")
+    }
+    
     
 }
