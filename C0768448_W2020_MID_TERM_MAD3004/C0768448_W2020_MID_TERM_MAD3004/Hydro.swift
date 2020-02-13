@@ -12,9 +12,16 @@ class Hydro:Bill
     var agencyName:String
     var unitsConsumed:Int
     
-    init(billID:Int, billDate:Date,billType:BillType,agencyName:String,unitsConsumed:Int) {
+    init(billID:Int, billDate:Date,billType:BillType,agencyName:String,unitsConsumed:Int)
+    {
         self.agencyName=agencyName
         self.unitsConsumed=unitsConsumed
         super.init(billID: billID, billDate: billDate, billType: billType)
+    }
+    
+    override func Display() {
+        super.Display()
+        print("Agency Name : \(agencyName)")
+        print("Units Consumed : \(unitsConsumed)")
     }
 }
