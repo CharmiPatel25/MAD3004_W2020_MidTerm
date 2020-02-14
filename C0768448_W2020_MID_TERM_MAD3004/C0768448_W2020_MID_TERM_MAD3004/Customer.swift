@@ -19,7 +19,7 @@ class Customer:IDisplay
     }
     var emailID:String?
     var totalAmountToPay:Float=0
-    var bills=[String:Bill]()
+    var bills=Array<Bill>()
 
     init(customerID:String,firstName:String,lastName:String,emailID:String) {
         self.customerID=customerID
@@ -43,9 +43,9 @@ class Customer:IDisplay
         return emailTest.evaluate(with: email)
     }
     
-    func addBill(bill:Bill,customerID:String)
+    func addBill(bill:Bill)
     {
-        bills.updateValue(bill, forKey: customerID)
+        bills.append(bill)
     }
     
     func calculateTotal()->Float
@@ -56,7 +56,7 @@ class Customer:IDisplay
         }
         for b in bills
         {
-            totalAmountToPay += b.value.totalAmount
+            totalAmountToPay += b.totalAmount
         }
         return totalAmountToPay
     }
@@ -66,13 +66,14 @@ class Customer:IDisplay
         print("Customer Full Name : \(fullName)")
         print("Customer Email ID : \(String(describing: emailID))")
         print("               ---- Bill Information ----")
+        print("        ******************************************")
         for b in bills
         {
-            print("        ******************************************")
-            b.value.Display()
+            
+            b.Display()
             print("        ******************************************")
         }
-        print("Total Bill Amount to Pay : \(calculateTotal())")
-        print("           ******************************************")
+        print("          Total Bill Amount to Pay : \(calculateTotal())")
+        print("        ******************************************")
     }
 }

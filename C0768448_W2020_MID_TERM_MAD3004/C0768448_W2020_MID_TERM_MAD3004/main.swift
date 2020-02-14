@@ -17,24 +17,29 @@ var  m1 = Mobile(billID: "MOBB002", billDate: Date(), billType: .Mobile, mobileM
 
 var  m2 = Mobile(billID: "MOBB001", billDate: Date(), billType: .Mobile, mobileManufacturerName: "Oneplus Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 40)
 var c1=Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID: "jon@gmail.com")
-c1.addBill(bill: m2, customerID: c1.customerID)
-c1.addBill(bill: m1, customerID: c1.customerID)
+c1.addBill(bill: m2)
+c1.addBill(bill: m1)
 c1.Display()
 
 
- var customers = Array<Customer>()
-   func addNewCustomer(customer:Customer)
-    {
-        customers.append(customer)
-    }
-     func findCustomerByID(id:String) -> Customer?
+var customers = Array<Customer>()
+customers.append(c1)
+     func findCustomerByID(id:String)
     {
         for c in customers
         {
             if (id == c.customerID)
             {
-                return c
+                c.Display()
+                
+            }
+            else
+            {
+                print("Customer  \(id) not found")
             }
         }
-        return nil
+        
     }
+print("\n\n    ****** GET Customer By ID Result ******")
+//findCustomerByID(id: "C001")
+findCustomerByID(id: "C009")

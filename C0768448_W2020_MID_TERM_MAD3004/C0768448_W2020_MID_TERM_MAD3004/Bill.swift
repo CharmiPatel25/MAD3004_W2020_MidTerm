@@ -32,9 +32,9 @@ class Bill:IDisplay
     
     func Display()
     {
-        print("Bill ID : \(billID)")
-        print("Bill Date : \(billDate)")
-        print("Bill Type : \(billType)")
-        print("Bill Amount : \(totalAmount)")
+        print("         Bill ID : \(billID)")
+        print("         Bill Date : \(billDate)")
+        print("         Bill Type : \(billType)")
+        print("         Bill Amount : \(totalAmount.totalBill())")
     }
 }

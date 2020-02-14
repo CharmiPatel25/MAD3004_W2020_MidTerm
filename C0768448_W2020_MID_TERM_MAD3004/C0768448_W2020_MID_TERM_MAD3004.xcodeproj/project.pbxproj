@@ -15,6 +15,7 @@
 		9BFD7CF823F747BD0054CBDD /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7CF523F747BD0054CBDD /* Customer.swift */; };
 		9BFD7CF923F747BD0054CBDD /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7CF623F747BD0054CBDD /* Internet.swift */; };
 		9BFD7CFC23F749660054CBDD /* float+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7CFB23F749660054CBDD /* float+extension.swift */; };
+		9BFD7CFE23F74B1D0054CBDD /* int+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7CFD23F74B1D0054CBDD /* int+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		9BFD7CF523F747BD0054CBDD /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9BFD7CF623F747BD0054CBDD /* Internet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
 		9BFD7CFB23F749660054CBDD /* float+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "float+extension.swift"; sourceTree = "<group>"; };
+		9BFD7CFD23F74B1D0054CBDD /* int+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "int+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFD7CFB23F749660054CBDD /* float+extension.swift */,
+				9BFD7CFD23F74B1D0054CBDD /* int+extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				9B4CCFB023F5F61200A9FFDC /* Bill.swift in Sources */,
 				9B4CCFA923F5F44E00A9FFDC /* main.swift in Sources */,
 				9BFD7CF923F747BD0054CBDD /* Internet.swift in Sources */,
+				9BFD7CFE23F74B1D0054CBDD /* int+extension.swift in Sources */,
 				9BFD7CF823F747BD0054CBDD /* Customer.swift in Sources */,
 				9B4CCFB223F5F8E400A9FFDC /* IDisplay.swift in Sources */,
 				9BFD7CFC23F749660054CBDD /* float+extension.swift in Sources */,

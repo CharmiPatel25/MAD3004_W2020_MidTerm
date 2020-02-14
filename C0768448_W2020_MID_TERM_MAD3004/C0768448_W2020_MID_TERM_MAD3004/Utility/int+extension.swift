@@ -9,5 +9,8 @@
 import Foundation
 extension Int
 {
-    
+    func unitsConsumedHydro()->String
+    {
+        return "\(self) Units"
+    }
 }
