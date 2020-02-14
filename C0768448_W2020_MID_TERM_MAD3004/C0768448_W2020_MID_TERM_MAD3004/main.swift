@@ -7,6 +7,12 @@
 //
 
 import Foundation
+var b1 = Bill(billID: "HYDY0001", billDate: Date(), billType: .Hydro)
+var b2 = Bill(billID: "HYDY0002", billDate: Date(), billType: .Internet)
+var  m1 = Mobile(billID: "MOBB002", billDate: Date(), billType: .Mobile, mobileManufacturerName: "Apple Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 50)
 
-print("Hello, World!")
-
+var  m2 = Mobile(billID: "MOBB001", billDate: Date(), billType: .Mobile, mobileManufacturerName: "Oneplus Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 40)
+var c1=Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID: "jon@gmail.com")
+c1.addBill(bill: m2, customerID: c1.customerID)
+c1.addBill(bill: m1, customerID: c1.customerID)
+c1.Display()

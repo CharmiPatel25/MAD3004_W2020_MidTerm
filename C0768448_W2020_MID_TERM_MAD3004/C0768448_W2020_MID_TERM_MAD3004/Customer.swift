@@ -10,7 +10,7 @@ import Foundation
 class Customer:IDisplay
 {
     
-    var customerID:Int
+    var customerID:String
     var firstName:String
     var lastName:String
     var fullName:String
@@ -19,16 +19,16 @@ class Customer:IDisplay
     }
     var emailID:String
     var totalAmountToPay:Float=0
-    var bills=[Int:Bill]()
+    var bills=[String:Bill]()
 
-    init(customerID:Int,firstName:String,lastName:String,emailID:String) {
+    init(customerID:String,firstName:String,lastName:String,emailID:String) {
         self.customerID=customerID
         self.firstName=firstName
         self.lastName=lastName
         self.emailID=emailID
     }
     
-    func addBill(bill:Bill,customerID:Int)
+    func addBill(bill:Bill,customerID:String)
     {
         bills.updateValue(bill, forKey: customerID)
     }

@@ -16,13 +16,13 @@ class Bill:IDisplay
 {
     
     
-    var billID:Int
+    var billID:String
     var billDate:Date
     var totalAmount:Float=0
     var billType:BillType
     
     
-    init(billID:Int, billDate:Date,billType:BillType)
+    init(billID:String, billDate:Date,billType:BillType)
     {
         self.billID = billID
         self.billDate = billDate
@@ -35,6 +35,6 @@ class Bill:IDisplay
         print("Bill ID : \(billID)")
         print("Bill Date : \(billDate)")
         print("Bill Type : \(billType)")
-        print("Bill Amount : \(totalAmount)")
+       // print("Bill Amount : \(totalAmount)")
     }
 }

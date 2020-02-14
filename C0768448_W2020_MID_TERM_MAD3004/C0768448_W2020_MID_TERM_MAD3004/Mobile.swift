@@ -16,7 +16,7 @@ class Mobile:Bill
     var minutesUsed:Float
     
     
-    init(billID:Int, billDate:Date,billType:BillType,mobileManufacturerName:String,mobilePlanName:String,mobileNumber:String,internetGBUsed:Float,minutesUsed:Float,totalAmount:Float)
+    init(billID:String, billDate:Date,billType:BillType,mobileManufacturerName:String,mobilePlanName:String,mobileNumber:String,internetGBUsed:Float,minutesUsed:Float,totalAmount:Float)
     {
         
         self.mobileManufacturerName=mobileManufacturerName
@@ -31,11 +31,13 @@ class Mobile:Bill
    
     override func Display() {
         super.Display()
+        print("Bill Amount : \(totalAmount)")
         print("Mobile Nanufacture Name : \(mobileManufacturerName)")
         print("Mobile Plan Name : \(mobilePlanName)")
         print("Mobile Number : \(mobileNumber)")
         print("Mobile Internet Used : \(internetGBUsed)")
         print("Minuted Usef : \(minutesUsed)")
+        
     }
     
     
