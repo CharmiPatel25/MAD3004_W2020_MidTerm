@@ -11,7 +11,7 @@ import Foundation
 let formatter = DateFormatter()
 formatter.dateFormat = "yyyy/MM/dd"
 
-var b1 = Bill(billID: "HYDY0001", billDate: dateFormatter.date(from: "2020-02-14"), billType: .Hydro)
+var b1 = Bill(billID: "HYDY0001", billDate: formatter.date(from: "2020-02-14")!, billType: .Hydro)
 var b2 = Bill(billID: "HYDY0002", billDate: Date(), billType: .Internet)
 var  m1 = Mobile(billID: "MOBB002", billDate: Date(), billType: .Mobile, mobileManufacturerName: "Apple Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 50)
 
@@ -21,12 +21,13 @@ c1.addBill(bill: m2, customerID: c1.customerID)
 c1.addBill(bill: m1, customerID: c1.customerID)
 c1.Display()
 
+
  var customers = Array<Customer>()
    func addNewCustomer(customer:Customer)
     {
         customers.append(customer)
     }
-     func findCustomerByID(id:Int) -> Customer?
+     func findCustomerByID(id:String) -> Customer?
     {
         for c in customers
         {

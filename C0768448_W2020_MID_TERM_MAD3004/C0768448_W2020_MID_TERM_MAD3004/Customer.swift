@@ -17,7 +17,7 @@ class Customer:IDisplay
     {
         return " \(firstName) \(lastName)"
     }
-    var emailID:String
+    var emailID:String?
     var totalAmountToPay:Float=0
     var bills=[String:Bill]()
 
@@ -25,7 +25,7 @@ class Customer:IDisplay
         self.customerID=customerID
         self.firstName=firstName
         self.lastName=lastName
-        if isEmailValid(self.emailID)
+        if isEmailValid(email: emailID)
        {
            self.emailID=emailID
        }
@@ -64,7 +64,7 @@ class Customer:IDisplay
     func Display() {
         print("Custome ID : \(customerID)")
         print("Customer Full Name : \(fullName)")
-        print("Customer Email ID : \(emailID)")
+        print("Customer Email ID : \(String(describing: emailID))")
         print("               ---- Bill Information ----")
         for b in bills
         {
