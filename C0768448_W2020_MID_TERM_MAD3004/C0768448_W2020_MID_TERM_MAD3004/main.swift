@@ -16,3 +16,20 @@ var c1=Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID:
 c1.addBill(bill: m2, customerID: c1.customerID)
 c1.addBill(bill: m1, customerID: c1.customerID)
 c1.Display()
+
+ var customers = Array<Customer>()
+   func addNewCustomer(customer:Customer)
+    {
+        customers.append(customer)
+    }
+     func findCustomerByID(id:Int) -> Customer?
+    {
+        for c in customers
+        {
+            if (id == c.customerID)
+            {
+                return c
+            }
+        }
+        return nil
+    }
