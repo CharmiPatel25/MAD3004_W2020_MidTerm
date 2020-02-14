@@ -9,13 +9,18 @@
 import Foundation
 extension Float
 {
-    func internetUnit()->String
+    func internetGBUnit()->String
     {
         return "\(self) GB"
     }
     
-    func minutesUsed()->String
+    func minutesUsedMobile()->String
     {
         return "\(self) Minutes"
+    }
+    
+    func totalBill()->String
+    {
+        return "$ \(self)"
     }
 }
