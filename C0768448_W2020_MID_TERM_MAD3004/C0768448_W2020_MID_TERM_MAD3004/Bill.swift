@@ -18,7 +18,7 @@ class Bill:IDisplay
     
     var billID:Int
     var billDate:Date
-    var totalAmount:Float = 0
+    var totalAmount:Float=0
     var billType:BillType
     
     
