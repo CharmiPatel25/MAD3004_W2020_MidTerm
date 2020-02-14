@@ -31,7 +31,7 @@ class Mobile:Bill
    
     override func Display() {
         super.Display()
-        print("Bill Amount : \(totalAmount)")
+      //  print("Bill Amount : \(totalAmount)")
         print("Mobile Nanufacture Name : \(mobileManufacturerName)")
         print("Mobile Plan Name : \(mobilePlanName)")
         print("Mobile Number : \(mobileNumber)")
