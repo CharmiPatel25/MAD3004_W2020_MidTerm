@@ -19,7 +19,7 @@ class Customer:IDisplay
     }
     var emailID:String?
     var totalAmountToPay:Float=0
-    var bills=Array<Bill>()
+    var bills=[String : Bill]()
 
     init(customerID:String,firstName:String,lastName:String,emailID:String) {
         self.customerID=customerID
@@ -43,11 +43,16 @@ class Customer:IDisplay
         return emailTest.evaluate(with: email)
     }
     
-    func addBill(bill:Bill)
+    func addBill(bill: Bill, billID: String)
     {
-        bills.append(bill)
+        bills.updateValue(bill, forKey: billID)
     }
     
+    func removeBill(billID:String)
+    {
+        bills.removeValue(forKey: billID)
+    }
+
     func calculateTotal()->Float
     {
         if bills.count == 0
@@ -56,24 +61,26 @@ class Customer:IDisplay
         }
         for b in bills
         {
-            totalAmountToPay += b.totalAmount
+            totalAmountToPay += b.value.totalAmount
         }
         return totalAmountToPay
     }
+    
+
     
     func Display() {
         print("Custome ID : \(customerID)")
         print("Customer Full Name : \(fullName)")
         print("Customer Email ID : \(String(describing: emailID))")
-        print("               ---- Bill Information ----")
-        print("        ******************************************")
+        print("\t ---- Bill Information ----")
+        print("\t ******************************************")
         for b in bills
         {
             
-            b.Display()
-            print("        ******************************************")
+            b.value.Display()
+            print("\t ******************************************")
         }
-        print("          Total Bill Amount to Pay : \(calculateTotal())")
-        print("        ******************************************")
+        print("\t Total Bill Amount to Pay : \(calculateTotal())")
+        print("\t ******************************************")
     }
 }

@@ -22,7 +22,7 @@ class Hydro:Bill
     
     override func Display() {
         super.Display()
-        print("         Agency Name : \(agencyName)")
-        print("         Units Consumed : \(unitsConsumed.unitsConsumedHydro())")
+        print("\t Agency Name : \(agencyName)")
+        print("\t Units Consumed : \(unitsConsumed.unitsConsumedHydro())")
     }
 }
