@@ -18,7 +18,7 @@ class Customer:IDisplay
         return " \(firstName) \(lastName)"
     }
     var emailID:String
-    var totalAmountToPay:Float?
+    var totalAmountToPay:Float=0
     var bills=[Int:Bill]()
 
     init(customerID:Int,firstName:String,lastName:String,emailID:String) {
@@ -33,19 +33,31 @@ class Customer:IDisplay
         bills.updateValue(bill, forKey: customerID)
     }
     
-
+    func calculateTotal()->Float
+    {
+        if bills.count == 0
+        {
+            print("No bill found with given index")
+        }
+        for b in bills
+        {
+            totalAmountToPay+=b.value.totalAmount
+        }
+        return totalAmountToPay
+    }
     
     func Display() {
         print("Custome ID : \(customerID)")
         print("Customer Full Name : \(fullName)")
         print("Customer Email ID : \(emailID)")
+        print("----Bill Information ----")
         for b in bills
         {
-            
-            print("----Bill Information ----")
             print("******************************************")
             b.value.Display()
             print("******************************************")
         }
+        print("Total Bill Amount to Pay : \(calculateTotal())")
+        print("******************************************")
     }
 }
