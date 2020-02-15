@@ -16,11 +16,13 @@ var b2 = Bill(billID: "HYDY0002", billDate: Date(), billType: .Internet)
 var  m1 = Mobile(billID: "MOBB002", billDate: Date(), billType: .Mobile, mobileManufacturerName: "Apple Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 50)
 
 var  m2 = Mobile(billID: "MOBB001", billDate: Date(), billType: .Mobile, mobileManufacturerName: "Oneplus Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 40)
+
 var c1=Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID: "jon@gmail.com")
+var c2=Customer(customerID: "C002", firstName: "Sansa", lastName: "Stark", emailID: "sansagmail.com")
 c1.addBill(bill: m1, billID: m1.billID)
 c1.addBill(bill: m2, billID: m2.billID)
 c1.Display()
-
+c2.Display()
 
 var customers = Array<Customer>()
     customers.append(c1)

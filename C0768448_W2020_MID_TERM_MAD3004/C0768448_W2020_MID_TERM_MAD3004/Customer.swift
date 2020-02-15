@@ -19,7 +19,7 @@ class Customer:IDisplay
     }
     var emailID:String?
     var totalAmountToPay:Float=0
-    var bills=[String : Bill]()
+    lazy var bills=[String : Bill]()
 
     init(customerID:String,firstName:String,lastName:String,emailID:String) {
         self.customerID=customerID
@@ -31,7 +31,7 @@ class Customer:IDisplay
        }
         else
         {
-            print("Invalid Email ID")
+            print("Invalid Email ID for \(customerID) : \(emailID) ")
         }
     }
     
@@ -57,7 +57,7 @@ class Customer:IDisplay
     {
         if bills.count == 0
         {
-            print("No bill found with given index")
+            print("\t No bill found for \(customerID)")
         }
         for b in bills
         {
@@ -81,6 +81,6 @@ class Customer:IDisplay
             print("\t ******************************************")
         }
         print("\t Total Bill Amount to Pay : \(calculateTotal())")
-        print("\t ******************************************")
+        print("\t ****************************************** \n \n")
     }
 }
