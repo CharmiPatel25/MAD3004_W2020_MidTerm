@@ -41,7 +41,7 @@ class Mobile:Bill
       //  print("Bill Amount : \(totalAmount)")
         print("\t Mobile Nanufacture Name : \(mobileManufacturerName)")
         print("\t Mobile Plan Name : \(mobilePlanName)")
-        print("\t Mobile Number : \(mobileNumber)")
+        print("\t Mobile Number : \(mobileNumber.formatPhoneNumber())")
         print("\t Mobile Internet Used : \(internetGBUsed.internetGBUnit())")
         print("\t Minuted Usef : \(minutesUsed.minutesUsedMobile())")
         

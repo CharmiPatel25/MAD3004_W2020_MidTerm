@@ -15,7 +15,7 @@ do
 {
     let m1 =  try Mobile(billID: "MOBB001", billDate: formatter.date(from: "2019-01-15")!, billType: .Mobile, mobileManufacturerName: "OnePlus", mobilePlanName: "4G", mobileNumber: "6472589746", internetGBUsed: 5, minutesUsed: 150, totalAmount: 90)
     
-    let i1=Internet(billID: "INTB001", billDate: formatter.date(from: "2018-05-24")!, billType: .Internet, providerName: "ROgers", internetGBUsed: 8, totalAmount: 50)
+    let i1=Internet(billID: "INTB001", billDate: formatter.date(from: "2018-05-24")!, billType: .Internet, providerName: "Rogers", internetGBUsed: 8, totalAmount: 50)
     
     let h1=Hydro(billID: "HYDB001", billDate: formatter.date(from: "2018-11-24")!, billType: .Hydro, agencyName: "Tata", unitsConsumed: 552, totalAmount: 400)
     

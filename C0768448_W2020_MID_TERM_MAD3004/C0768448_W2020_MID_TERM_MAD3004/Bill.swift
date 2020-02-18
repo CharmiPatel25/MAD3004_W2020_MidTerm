@@ -15,12 +15,10 @@ enum BillType
 class Bill:IDisplay
 {
     
-    
     var billID:String
     var billDate:Date
     var totalAmount:Float=0
     var billType:BillType
-    
     
     init(billID:String, billDate:Date,billType:BillType)
     {
@@ -28,7 +26,6 @@ class Bill:IDisplay
         self.billDate = billDate
         self.billType=billType
     }
-    
     
     func Display()
     {
