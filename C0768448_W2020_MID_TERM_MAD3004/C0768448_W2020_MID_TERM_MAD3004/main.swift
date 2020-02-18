@@ -11,20 +11,14 @@ import Foundation
 let formatter = DateFormatter()
 formatter.dateFormat = "yyyy/MM/dd"
 
-var b1 = Bill(billID: "HYDY0001", billDate: formatter.date(from: "2020-02-14")!, billType: .Hydro)
-var b2 = Bill(billID: "HYDY0002", billDate: Date(), billType: .Internet)
-var  m1 = Mobile(billID: "MOBB002", billDate: Date(), billType: .Mobile, mobileManufacturerName: "Apple Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 50)
 
-var  m2 = Mobile(billID: "MOBB001", billDate: Date(), billType: .Mobile, mobileManufacturerName: "Oneplus Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 40)
-do
-{
-    let m1=Mobile(billID: "MOBB001", billDate: formatter.date(from: "2019-01-15")!, billType: .Mobile, mobileManufacturerName: "OnePlus", mobilePlanName: "4G", mobileNumber: "6472287968", internetGBUsed: 5, minutesUsed: 150, totalAmount: 90)
+    let m1 =  Mobile(billID: "MOBB001", billDate: formatter.date(from: "2019-01-15")!, billType: .Mobile, mobileManufacturerName: "OnePlus", mobilePlanName: "4G", mobileNumber: "64722879", internetGBUsed: 5, minutesUsed: 150, totalAmount: 90)
     
     let i1=Internet(billID: "INTB001", billDate: formatter.date(from: "2018-05-24")!, billType: .Internet, providerName: "ROgers", internetGBUsed: 8, totalAmount: 50)
     
     let h1=Hydro(billID: "HYDB001", billDate: formatter.date(from: "2018-11-24")!, billType: .Hydro, agencyName: "Tata", unitsConsumed: 552, totalAmount: 400)
     
-    let m2=Mobile(billID: "MOBB002", billDate: formatter.date(from: "2019-12-31")!, billType: .Mobile, mobileManufacturerName: "Apple Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 40)
+    let m2 =  Mobile(billID: "MOBB002", billDate: formatter.date(from: "2019-12-31")!, billType: .Mobile, mobileManufacturerName: "Apple Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 40)
     
     let i2=Internet(billID: "INTB002", billDate: formatter.date(from: "2019-12-31")!, billType: .Internet, providerName: "Roger5G", internetGBUsed: 500, totalAmount: 800)
     
@@ -70,16 +64,7 @@ var customers = Array<Customer>()
         
     }
 print("\t ****** GET Customer By ID Result ****** \n")
-//findCustomerByID(id: "C001")
-findCustomerByID(id: "C009")
-}
+findCustomerByID(id: "C001")
+//findCustomerByID(id: "C009")
 
-catch CustomerError.invalidEmail
-{
-    print("Email address is not Valid !")
-}
-
-catch CustomerError.invalidNumber
-{
-    print("Mobile Number is not Valid !")
-}
+ 
