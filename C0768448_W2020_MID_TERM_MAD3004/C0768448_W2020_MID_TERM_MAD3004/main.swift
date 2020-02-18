@@ -23,10 +23,14 @@ formatter.dateFormat = "yyyy/MM/dd"
     let i2=Internet(billID: "INTB002", billDate: formatter.date(from: "2019-12-31")!, billType: .Internet, providerName: "Roger5G", internetGBUsed: 500, totalAmount: 800)
     
     let h2=Hydro(billID: "HYDB002", billDate: formatter.date(from: "2019-11-30")!, billType: .Hydro, agencyName: "Reliance", unitsConsumed: 790, totalAmount: 1000)
+
+let inu1=Insuarnce(billID: "INUB001", billDate: formatter.date(from: "2019-02-15")!, billType: .Insurance, providerName: "LIC", type: "Home insurance", startDate: formatter.date(from: "2018-01-15")!, endDate: formatter.date(from: "2018-12-14")!, totalinstallment: 11)
     
 var c1 =  Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID: "jon@gmail.com")
 var c2 =  Customer(customerID: "C002", firstName: "Sansa", lastName: "Stark", emailID: "sansagmail.com")
 var c3 = Customer(customerID: "C003", firstName: "Danerys", lastName: "Targeryen", emailID: "danny@gmail.com")
+
+var c4 = Customer(customerID: "C004", firstName: "Robert", lastName: "Baratheon", emailID: "robert@gmail.com")
 
     c1.addBill(bill: m1, billID: m1.billID)
     c1.addBill(bill: i1, billID: i1.billID)
@@ -36,11 +40,14 @@ var c3 = Customer(customerID: "C003", firstName: "Danerys", lastName: "Targeryen
     c2.addBill(bill: i2, billID: i2.billID)
     
     c3.addBill(bill: h2, billID: h2.billID)
+
+c4.addBill(bill: inu1, billID: inu1.billID)
     
     
     c1.Display()
     c2.Display()
     c3.Display()
+c4.Display()
 
 
 

@@ -15,6 +15,7 @@ class Insuarnce:Bill
     var endDate:Date
     var totalDays:Int
     var totalinstallment:Int
+
     
     init(billID:String, billDate:Date,billType:BillType,providerName:String,type:String,startDate:Date,endDate:Date,totalinstallment:Int) {
         self.providerName=providerName
@@ -24,6 +25,7 @@ class Insuarnce:Bill
         self.totalDays=Calendar.current.dateComponents([.day], from: startDate,to: endDate).day!
         self.totalinstallment=totalinstallment
         super.init(billID: billID, billDate: billDate, billType: .Insurance)
+        totalAmount=Float(totalinstallment*100)
     }
     
     override func Display() {
