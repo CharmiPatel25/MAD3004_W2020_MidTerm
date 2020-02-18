@@ -32,13 +32,13 @@ class Customer:IDisplay
        }
         else
         {
-             throw CustomerError.invalidEmail
-           // print("Invalid Email ID for \(customerID) : \(emailID) ")
+             // CustomerError.invalidEmail
+            print("Invalid Email ID for \(customerID) : \(emailID) ")
         }
     }
     
     
-      func isEmailValid(email:String) -> Bool {
+      func isEmailValid(email:String)  -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
