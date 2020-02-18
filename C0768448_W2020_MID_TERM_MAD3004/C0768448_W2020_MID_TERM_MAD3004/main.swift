@@ -32,6 +32,7 @@ var c2 = try Customer(customerID: "C002", firstName: "Sansa", lastName: "Stark",
 var c3 = try Customer(customerID: "C003", firstName: "Danerys", lastName: "Targeryen", emailID: "danny@gmail.com")
 
 var c4 = try Customer(customerID: "C004", firstName: "Robert", lastName: "Baratheon", emailID: "robert@gmail.com")
+    var c5 = try Customer(customerID: "C005", firstName: "Cersi", lastName: "Lannister", emailID: "cersi@gmail.com")
 
     c1.addBill(bill: m1, billID: m1.billID)
     c1.addBill(bill: i1, billID: i1.billID)
@@ -48,7 +49,8 @@ c4.addBill(bill: inu1, billID: inu1.billID)
     c1.Display()
     c2.Display()
     c3.Display()
-c4.Display()
+    c4.Display()
+    c5.Display()
 
 
 

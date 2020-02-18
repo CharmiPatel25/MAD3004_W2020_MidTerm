@@ -10,6 +10,5 @@ import Foundation
 extension String {
     public func formatPhoneNumber() -> String {
         return replacingOccurrences(of: "(\\d{3})(\\d{3})(\\d+)", with: "($1) $2-$3", options: .regularExpression, range: nil)
-        
     }
 }
