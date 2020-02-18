@@ -27,11 +27,13 @@ class Customer:IDisplay
         self.lastName=lastName
         if isEmailValid(email: emailID)
        {
+          
            self.emailID=emailID
        }
         else
         {
-            print("Invalid Email ID for \(customerID) : \(emailID) ")
+             throw CustomerError.invalidEmail
+           // print("Invalid Email ID for \(customerID) : \(emailID) ")
         }
     }
     
