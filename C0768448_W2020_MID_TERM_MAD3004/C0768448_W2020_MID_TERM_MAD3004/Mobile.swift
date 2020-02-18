@@ -25,10 +25,19 @@ class Mobile:Bill
         self.internetGBUsed=internetGBUsed
         self.minutesUsed=minutesUsed
         super.init(billID: billID, billDate: billDate, billType: billType)
+        
         self.totalAmount=totalAmount
     }
     
    
+    func isNumberValid(mobileNumber: String) -> Bool {
+        let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+        let result =  phoneTest.evaluate(with: mobileNumber)
+        return result
+    }
+    
+    
     override func Display() {
         super.Display()
       //  print("Bill Amount : \(totalAmount)")

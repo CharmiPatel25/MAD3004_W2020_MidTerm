@@ -9,6 +9,5 @@
 import Foundation
 enum CustomerError:Error
 {
-    case invalidEmail
-    case invalidNumber
+    case invalidEmail,invalidNumber
 }

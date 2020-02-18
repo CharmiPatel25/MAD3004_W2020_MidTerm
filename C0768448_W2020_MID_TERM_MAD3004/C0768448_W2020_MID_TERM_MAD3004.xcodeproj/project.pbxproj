@@ -11,6 +11,7 @@
 		9B4CCFA923F5F44E00A9FFDC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCFA823F5F44E00A9FFDC /* main.swift */; };
 		9B4CCFB023F5F61200A9FFDC /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCFAF23F5F61200A9FFDC /* Bill.swift */; };
 		9B4CCFB223F5F8E400A9FFDC /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4CCFB123F5F8E400A9FFDC /* IDisplay.swift */; };
+		9B91097523FC6802009E0732 /* CustomerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91097423FC6802009E0732 /* CustomerError.swift */; };
 		9BFD7CF723F747BD0054CBDD /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7CF423F747BD0054CBDD /* Hydro.swift */; };
 		9BFD7CF823F747BD0054CBDD /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7CF523F747BD0054CBDD /* Customer.swift */; };
 		9BFD7CF923F747BD0054CBDD /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7CF623F747BD0054CBDD /* Internet.swift */; };
@@ -36,6 +37,7 @@
 		9B4CCFA823F5F44E00A9FFDC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9B4CCFAF23F5F61200A9FFDC /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9B4CCFB123F5F8E400A9FFDC /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
+		9B91097423FC6802009E0732 /* CustomerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerError.swift; sourceTree = "<group>"; };
 		9BFD7CF423F747BD0054CBDD /* Hydro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
 		9BFD7CF523F747BD0054CBDD /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9BFD7CF623F747BD0054CBDD /* Internet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		9B4CCFA723F5F44E00A9FFDC /* C0768448_W2020_MID_TERM_MAD3004 */ = {
 			isa = PBXGroup;
 			children = (
+				9B91097423FC6802009E0732 /* CustomerError.swift */,
 				9BFD7CFA23F748E20054CBDD /* Utility */,
 				9BFD7CF523F747BD0054CBDD /* Customer.swift */,
 				9BFD7CF423F747BD0054CBDD /* Hydro.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				9BFD7CF723F747BD0054CBDD /* Hydro.swift in Sources */,
 				9B4CCFB023F5F61200A9FFDC /* Bill.swift in Sources */,
+				9B91097523FC6802009E0732 /* CustomerError.swift in Sources */,
 				9B4CCFA923F5F44E00A9FFDC /* main.swift in Sources */,
 				9BFD7CF923F747BD0054CBDD /* Internet.swift in Sources */,
 				9BFD7CFE23F74B1D0054CBDD /* int+extension.swift in Sources */,
