@@ -74,7 +74,7 @@ class Customer:IDisplay
     func Display() {
         print("Custome ID : \(customerID)")
         print("Customer Full Name : \(fullName)")
-        print("Customer Email ID : \(String(describing: emailID))")
+        print("Customer Email ID : \(emailID ?? "nil"))")
         print("\t ---- Bill Information ----")
         print("\t ******************************************")
         for b in bills
