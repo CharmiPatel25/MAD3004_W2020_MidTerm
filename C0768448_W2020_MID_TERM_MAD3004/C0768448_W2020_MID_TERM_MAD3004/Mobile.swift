@@ -16,14 +16,16 @@ class Mobile:Bill
     var minutesUsed:Float
     
     
-    init(billID:String, billDate:Date,billType:BillType,mobileManufacturerName:String,mobilePlanName:String,mobileNumber:String,internetGBUsed:Float,minutesUsed:Float,totalAmount:Float)
+    init(billID:String, billDate:Date,billType:BillType,mobileManufacturerName:String,mobilePlanName:String,mobileNumber:String,internetGBUsed:Float,minutesUsed:Float,totalAmount:Float) throws
     {
         
         self.mobileManufacturerName=mobileManufacturerName
         self.mobilePlanName=mobilePlanName
         if mobileNumber.count != 10
         {
-             print("Invalid Mobile Number \(mobileNumber)")
+          print("Invalid Mobile Number \(mobileNumber) : Cannot be less than 10 digits")
+          throw  CustomerError.invalidNumber
+            
         }
         self.mobileNumber=mobileNumber
         self.internetGBUsed=internetGBUsed

@@ -11,14 +11,15 @@ import Foundation
 let formatter = DateFormatter()
 formatter.dateFormat = "yyyy/MM/dd"
 
-
-    let m1 =  Mobile(billID: "MOBB001", billDate: formatter.date(from: "2019-01-15")!, billType: .Mobile, mobileManufacturerName: "OnePlus", mobilePlanName: "4G", mobileNumber: "64722879", internetGBUsed: 5, minutesUsed: 150, totalAmount: 90)
+do
+{
+    let m1 =  try Mobile(billID: "MOBB001", billDate: formatter.date(from: "2019-01-15")!, billType: .Mobile, mobileManufacturerName: "OnePlus", mobilePlanName: "4G", mobileNumber: "6472589746", internetGBUsed: 5, minutesUsed: 150, totalAmount: 90)
     
     let i1=Internet(billID: "INTB001", billDate: formatter.date(from: "2018-05-24")!, billType: .Internet, providerName: "ROgers", internetGBUsed: 8, totalAmount: 50)
     
     let h1=Hydro(billID: "HYDB001", billDate: formatter.date(from: "2018-11-24")!, billType: .Hydro, agencyName: "Tata", unitsConsumed: 552, totalAmount: 400)
     
-    let m2 =  Mobile(billID: "MOBB002", billDate: formatter.date(from: "2019-12-31")!, billType: .Mobile, mobileManufacturerName: "Apple Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 40)
+    let m2 = try Mobile(billID: "MOBB002", billDate: formatter.date(from: "2019-12-31")!, billType: .Mobile, mobileManufacturerName: "Apple Inc.", mobilePlanName: "LTE+3G 9.5GB Promo", mobileNumber: "9078254685", internetGBUsed: 4, minutesUsed: 230, totalAmount: 40)
     
     let i2=Internet(billID: "INTB002", billDate: formatter.date(from: "2019-12-31")!, billType: .Internet, providerName: "Roger5G", internetGBUsed: 500, totalAmount: 800)
     
@@ -26,11 +27,11 @@ formatter.dateFormat = "yyyy/MM/dd"
 
 let inu1=Insuarnce(billID: "INUB001", billDate: formatter.date(from: "2019-02-15")!, billType: .Insurance, providerName: "LIC", type: "Home insurance", startDate: formatter.date(from: "2018-01-15")!, endDate: formatter.date(from: "2018-12-14")!, totalinstallment: 11)
     
-var c1 =  Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID: "jon@gmail.com")
-var c2 =  Customer(customerID: "C002", firstName: "Sansa", lastName: "Stark", emailID: "sansagmail.com")
-var c3 = Customer(customerID: "C003", firstName: "Danerys", lastName: "Targeryen", emailID: "danny@gmail.com")
+var c1 = try Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID: "jon@gmail.com")
+var c2 = try Customer(customerID: "C002", firstName: "Sansa", lastName: "Stark", emailID: "sansa@gmail.com")
+var c3 = try Customer(customerID: "C003", firstName: "Danerys", lastName: "Targeryen", emailID: "danny@gmail.com")
 
-var c4 = Customer(customerID: "C004", firstName: "Robert", lastName: "Baratheon", emailID: "robert@gmail.com")
+var c4 = try Customer(customerID: "C004", firstName: "Robert", lastName: "Baratheon", emailID: "robert@gmail.com")
 
     c1.addBill(bill: m1, billID: m1.billID)
     c1.addBill(bill: i1, billID: i1.billID)
@@ -71,7 +72,14 @@ var customers = Array<Customer>()
         
     }
 print("\t ****** GET Customer By ID Result ****** \n")
-findCustomerByID(id: "C001")
-//findCustomerByID(id: "C009")
+//findCustomerByID(id: "C001")
+findCustomerByID(id: "C009")
 
- 
+}
+
+catch CustomerError.invalidEmail
+{
+}
+
+catch CustomerError.invalidNumber{}
+

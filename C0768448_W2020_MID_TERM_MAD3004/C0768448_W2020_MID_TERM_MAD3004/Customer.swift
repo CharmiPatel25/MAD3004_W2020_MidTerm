@@ -21,7 +21,7 @@ class Customer:IDisplay
     var totalAmountToPay:Float=0
     lazy var bills=[String : Bill]()
 
-    init(customerID:String,firstName:String,lastName:String,emailID:String) {
+    init(customerID:String,firstName:String,lastName:String,emailID:String) throws {
         self.customerID=customerID
         self.firstName=firstName
         self.lastName=lastName
@@ -32,8 +32,9 @@ class Customer:IDisplay
        }
         else
         {
-             // CustomerError.invalidEmail
-            print("Invalid Email ID for \(customerID) : \(emailID) ")
+              print("Invalid Email ID for \(customerID) : \(emailID) ")
+              throw CustomerError.invalidEmail
+    
         }
     }
     
