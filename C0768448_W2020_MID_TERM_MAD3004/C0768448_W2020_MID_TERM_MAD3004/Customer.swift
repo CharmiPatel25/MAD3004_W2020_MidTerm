@@ -46,6 +46,7 @@ class Customer:IDisplay
         return emailTest.evaluate(with: email)
     }
     
+    //
     func addBill(bill: Bill, billID: String)
     {
         bills.updateValue(bill, forKey: billID)
@@ -81,9 +82,9 @@ class Customer:IDisplay
         {
             
             b.value.Display()
-            print("\t ******************************************")
+            print("\t ****************************************** \n")
         }
-        print("\t Total Bill Amount to Pay : \(calculateTotal())")
+        print("\t\t Total Bill Amount to Pay : \(calculateTotal().totalBill())")
         print("\t ****************************************** \n \n")
     }
 }

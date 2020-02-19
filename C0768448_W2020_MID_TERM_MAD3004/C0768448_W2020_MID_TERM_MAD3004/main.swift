@@ -43,20 +43,25 @@ let c3 = try Customer(customerID: "C003", firstName: "Danerys", lastName: "Targe
     
     c3.addBill(bill: h2, billID: h2.billID)
 
-c4.addBill(bill: inu1, billID: inu1.billID)
+   c4.addBill(bill: inu1, billID: inu1.billID) //Customer with insurance
     
     
     c1.Display()
     c2.Display()
     c3.Display()
     c4.Display()
-    c5.Display()
+    c5.Display()  //Customer with no Bill
 
 
 
 
 var customers = Array<Customer>()
     customers.append(c1)
+    customers.append(c2)
+     customers.append(c3)
+     customers.append(c4)
+     customers.append(c5)
+    
      func findCustomerByID(id:String)
     {
         for c in customers
@@ -64,24 +69,17 @@ var customers = Array<Customer>()
             if (id == c.customerID)
             {
                 c.Display()
-                
-            }
-            else
-            {
-                print("\t Customer  \(id) not found")
             }
         }
-        
+      
     }
 print("\t ****** GET Customer By ID Result ****** \n")
 //findCustomerByID(id: "C001")
-findCustomerByID(id: "C009")
+ findCustomerByID(id: "C001")
 
 }
 
-catch CustomerError.invalidEmail
-{
-}
+catch CustomerError.invalidEmail{}
 
 catch CustomerError.invalidNumber{}
 

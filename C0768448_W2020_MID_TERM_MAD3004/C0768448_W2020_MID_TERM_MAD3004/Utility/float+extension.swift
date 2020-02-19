@@ -21,6 +21,6 @@ extension Float
     
     func totalBill()->String
     {
-        return "$ \(self)"
+        return "$\(self)"
     }
 }
